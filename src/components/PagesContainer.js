@@ -97,7 +97,7 @@ export default function PortfolioContainer() {
       </footer>
       
       <div className='alexSignature'>
-        <p>Website designed and made with &#x2764; by <a href='https://portfoliopage.herokuapp.com/#about'>Alex C.</a></p>
+        <p>Website designed and made with &#x2764; by <a href='https://portfoliopage.herokuapp.com/#about'>Alex C</a></p>
       </div>
     </div>
     // </Router>
