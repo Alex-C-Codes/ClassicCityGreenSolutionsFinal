@@ -289,4 +289,9 @@
     margin-bottom: 5px;
     font-size: 14px;
   }
+  .contactPage {
+    width: 300px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
