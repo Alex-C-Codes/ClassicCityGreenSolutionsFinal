@@ -20,6 +20,7 @@ export default function About() {
         className="card-thumbnail"
         />
         <div className='aboutSection'>
+          <br></br>
           <p>
           We all enjoy the conveniences of modern life. But in today's world, those conveniences are just a catastrophic event away from being out of reach. Our solutions are intended for disaster relief, off the grid living, RV independence, or simply insurance in case you have to "bug out."
           </p>

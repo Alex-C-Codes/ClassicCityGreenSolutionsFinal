@@ -123,10 +123,15 @@
   padding-right: 75px;
 } */
 
+.homePageImage {
+  width: 100%;
+  max-width: 1200px;
+}
+
 /* Contact Content Styling */
 
 .contactPage {
-  width: 750px;
+  width: 700px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -279,10 +284,6 @@
   }
 }
 
-.homePageBackground {
-  padding: 10%;
-}
-
 @media (max-width: 768px) {
   .nav-list li {
     margin-right: 5px;
@@ -293,5 +294,8 @@
     width: 300px;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .homePageImage {
+    width: 300px;
   }
 }

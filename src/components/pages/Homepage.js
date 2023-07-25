@@ -4,7 +4,7 @@ import image from '../../assets/images/grass-trees-2304w.webp';
 
 export default function Homepage() {
   return (
-    <div style={{backgroundImage:`url(${image})`, backgroundRepeat: 'no-repeat', backgroundSize:'cover', padding: '10%'}}>
+    <div className='homePageImage' style={{backgroundImage:`url(${image})`, backgroundRepeat: 'no-repeat', backgroundSize:'cover', padding: '10%'}}>
       
       <div className='homePageContent'>
         <h3>Let us customize a sustainable solution for your mobile energy and utility needs.</h3>
