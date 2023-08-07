@@ -1,105 +1,32 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
 
 import Homepage from './pages/Homepage';
+import Story from './pages/Story';
+import Services  from './pages/Services';
 import About from './pages/About';
-import Products  from './pages/Products';
 import Contact from './pages/Contact';
+import Details from './pages/Details';
+// import Slideshow from './pages/Slideshow';
 
 export default function PortfolioContainer() {
-  const [activeTab, setActiveTab] = useState('');
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
-
   return (
-    // <Router>
     <div className="App-header">
-      <nav className='nav-bar'>
-        <div className='nav-header'>
-          <h1 className='nav-title'>
-            <div 
-              className={activeTab === 'home' ? 'active' : ''}
-              onClick={() => handleTabChange('home')}
-            >
-              Classic City Green Solutions
-            </div>
-          </h1>
-          <ul className='nav-list'>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            {/* <li
-              className={activeTab === 'about' ? 'active' : ''}
-              onClick={() => handleTabChange('about')}
-            > */}
-            <li>
-              {/* <Link to="/about">About</Link> */}
-              <a href='#about'>About</a>
-            </li>
-            {/* <li
-              className={activeTab === 'products' ? 'active' : ''}
-              onClick={() => handleTabChange('products')}
-            > */}
-            <li>
-              {/* <Link to="/products">Products</Link> */}
-              <a href='#products'>Products</a>
-            </li>
-            {/* <li
-              className={activeTab === 'contact' ? 'active' : ''}
-              onClick={() => handleTabChange('contact')}
-            > */}
-            <li>
-            {/* <Link to="/contact">Contact</Link> */}
-            <a href='#contact'>Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* <div className='content-wrapper'>
-        <div className='column-left'></div>
-
-        <div className="content">
-          {activeTab === '' && <Homepage />}
-          {activeTab === 'home' && <Homepage />}
-          {activeTab === 'about' && <About />}
-        </div>
-        
-        <div className='column-right'></div>
-      </div> */}
-
-      {/* <Routes>
-        <Route exact path="/" Component={Homepage} />
-        <Route path="/about" Component={About} />
-      </Routes> */}
-
-      <div id="home" className="content"><Homepage /></div>
-      <div id='about' className="content"><About /></div>
-      <div id='products' className="content"><Products /></div>
-      <div id='contact' className="content"><Contact /></div>
-
-      <footer className='footer'>
-        {/* <ul className='nav-list'>
-          <li>Phone: <a>404-790-3995</a></li>
-          <li>Email: <a>adsff</a></li>
-        </ul> */}
-          <p>
-            Phone:
-            <a target="_blank" rel="noopener noreferrer" href="tel:4044297980"> (404) 429-7980</a>
-          </p>
-          <p>
-            Email:
-            <a target="_blank" rel="noopener noreferrer" href="mailto:jmsteven28@live.com"> jmsteven28@live.com</a>
-          </p>
-      </footer>
       
-      <div className='alexSignature'>
-        <p>Website designed and made with &#x2764; by <a href='https://portfoliopage.herokuapp.com/#about'>Alex C</a></p>
+      {/* <Navbar /> */}
+      <div id="home" className="content"><Homepage /></div>
+      <div id="story" className="content"><Story /></div>
+      <div id='details' className="content"><Details /></div>
+      <div id='services' className="content"><Services /></div>
+      {/* <div id='slideshow' className="content"><Slideshow /></div> */}
+      <div id='about' className="content"><About /></div>
+      <div id='contact' className="content"><Contact /></div>
+      <div className='content'>
+        <a href="https://buy.stripe.com/test_eVa6p87bXfx3d8I4gg" rel="noopener noreferrer">
+          <button className="purchase-button-homepage">
+            <b>Buy a Solar Panel Kit Today</b>
+          </button>
+        </a>
       </div>
     </div>
-    // </Router>
   );
 }

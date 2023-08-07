@@ -1,25 +1,28 @@
 /* App Styling */
 
-/* .App {
-  text-align: center;
-} */
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
+.app {
+  min-height: 100vh;
+  /* padding-top: 120px; */
+  /* padding-top:90px; */
+  /* background-color: #f7f7f6; */
+  position: relative;
+  padding-bottom: 19rem;
+}
 
 .App-header {
-  /* background-color: #282c34; */
-  background-color: rgb(0, 52, 7);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* THIS IS THE STYLING CHOICE OF QUESTION */
-  align-items: center;
-  /* font-size: calc(10px + 2vmin); */
   font-size: calc(8px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* #content-wrapper {
+  
+} */
+
+.homePageBackground {
+  padding: 10%;
 }
 
 .App-link {
@@ -34,17 +37,87 @@
 
 /* NavTab styling */
 
+.logo img {
+  width: 100%;
+  max-width: 110px;
+  height: 100%;
+  max-height: 250px;
+}
+
+.logo a{
+  text-decoration: none;
+  color: black;
+}
+
 .nav-bar {
-  /* padding: 30px; */
-  margin-top: 10px;
-  margin-bottom: 10px;
-  /* border: 1px solid #ccc;
-  border-radius: 4px; */
+  background-color: white;
+  /* background-color: #f7f7f6; */
   border-bottom: 1px solid #787878;
+  /* position: sticky;
+  top: 0;
+  z-index: 100; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.top-row {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: calc(1px + 2vmin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(92, 209, 255, 0.9);
+  width: 100%;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+.contact-link {
+  margin-right: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.nav-list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-list {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -59,15 +132,8 @@
 }
 
 .nav-list li {
-  display: inline-block;
-  /* margin-right: 5px;
-  margin-left: 5px; */
-  /* margin-bottom: 10px; */
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 32px;
-  border: 1px solid #787878;
-  /* border-radius: 4px; */
+  display: flex;
 }
 
 .nav-list li.active {
@@ -76,13 +142,19 @@
 }
 
 .nav-list li:hover {
-  /* font-weight: bold; */
-  background-color: #14161b;
+  background-color: #ababab;
 }
 
 .nav-list a {
   text-decoration: none;
-  color: white;
+  color: black;
+  
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  padding: 8px 32px;
 }
 
 .nav-header {
@@ -105,53 +177,82 @@
 .content {
   margin-top: 0px;
   text-align: center;
-  padding: 25px;
+  padding-top: 130px;
+  /* padding-top: 80px; */
+}
+
+.content h1 {
+  padding-bottom: 2%;
 }
 
 /* HomePage Content Styilng */
 
-.homePageContent {
-  background: rgba(0, 151, 19, 0.9);
-  /* background: rgba(40, 44, 52, .8); */
-  /* background-color:#282c34; */
-  padding: 10px;
-  border-radius: 8px;
+#home {
+  padding-top: 0;
 }
 
-/* .homePageContent p {
-  padding-left: 75px;
-  padding-right: 75px;
-} */
-
-.homePageImage {
+.homePageContent {
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
   width: 100%;
-  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homepageBackgroundImage {
+  width: 100%;
+  height: auto;
+  /* background-image: fixed; */
+  background-position: center;
+}
+
+.purchase-button-homepage {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.purchase-button-homepage:hover {
+  background-color: #0056b3;
+}
+
+/* Story page styling */
+
+.storyPage {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.storyPage hr {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+
+.storyPage h3 {
+  padding-bottom: 2%;
 }
 
 /* Contact Content Styling */
 
 .contactPage {
-  width: 700px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .contactPage input {
-  /* padding-left: 250px;
-  padding-right: 250px;
-  padding-bottom: 25px; */
   width: 100%;
-  /* max-width: 750px;
-  height: 100%; */
 }
 
 .contactPage textarea {
-  /* width: 750px; */
   width: 100%;
-  /* max-width: 750px;
-  height: 100%;
-  max-height: 250px; */
-  /* object-fit: cover; */
 }
 
 .contactPage button {
@@ -160,48 +261,82 @@
   height: 100%;
   max-height: 250px;
   font-size: 24px;
-  /* width: 100%;
-  max-width: 500px;
-  height: 100%;
-  max-height: 250px;
-  object-fit: cover; */
 }
 
 /* About Section Styling */
 
-.aboutSection {
-  padding-left: 75px;
-  padding-right: 75px;
+.team-profile-list {
+  display: flex;
+  gap: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
-/* Products Card Styling */
-
-.card {
-  /* background-color: #787878; */
-  /* background-color: #333843; */
-  background: rgb(24, 77, 31);
-  /* border: 1px solid #ccc; */
+.team-profile {
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px; /* Set the maximum width for the card */
-  margin: 0 auto; /* Center the card horizontally */
+  width: 100%;
 }
 
-/* .card-thumbnail {
-  width: 100%;
-  border-radius: 8px;
+.profession {
+  color: rgba(0, 159, 222, 1);
+}
+
+.about-page ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-profile-thumbnail {
+  width: 125px;
+  max-width: 125px;
+  height: 125px;
+  max-height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Services Page Styling */
+
+.services-page {
+  display: flex;
+  gap: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.services-page hr {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+
+/* #services-hr {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 5%;
 } */
 
-.card-thumbnail {
-  /* width: 250px;
-  height: 250px; */
-  width: 100%;
-  max-width: 250px;
-  height: 100%;
-  max-height: 250px;
-  object-fit: cover;
+.card {
+  background: rgba(0, 149, 20, 0.9);;
+  border: 1px solid #ccc;
   border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.card-thumbnail {
+  width: 125px;
+  max-width: 125px;
+  height: 125px;
+  max-height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
   margin: 0 auto;
 }
 
@@ -211,15 +346,11 @@
 }
 
 .price-tag {
-  /* background-color: #007bff; */
   color: #fff;
   border: none;
   border-radius: 4px;
   padding: 4px 8px;
   font-size: 28px;
-  /* position: absolute;
-  top: 10px;
-  right: 10px; */
 }
 
 .purchase-button {
@@ -227,14 +358,39 @@
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 12px 24px; /* Increase the padding to make the button bigger */
-  font-size: 16px; /* Increase the font size to make the button text bigger */
+  padding: 12px 24px;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: 15px; /* Increase the margin for better spacing */
+  margin-top: 15px;
 }
 
 .purchase-button:hover {
   background-color: #0056b3;
+}
+
+/* Slideshow Page Styling */
+
+.slideShow {
+  /* background-color: rgba(92, 209, 255, 1); */
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.slideshow-image {
+  width: 100%;
+  max-width: 550px;
+  height: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  margin: 0 auto;
+  background-position: center;
+}
+
+/* BookNow Page Styling */
+
+.bookNowPage {
+  padding-top: 160px;
 }
 
 /* Footer styling */
@@ -243,13 +399,16 @@
   font-size: 20px;
   padding: 10px;
   text-align: center;
-  background-color: rgb(0, 99, 13);
+  background: rgba(92, 209, 255, 1);
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 19rem;
 }
 
 .footer a {
   text-decoration: none;
-  color: white;
 }
 
 .footer a:hover {
@@ -257,21 +416,18 @@
   color: white;
 }
 
-.alexSignature {
+.signature {
   font-size: 14px;
   padding: 10px;
-  text-align: center;
-  /* background-color: rgba(0, 151, 19, 0.9); */
-  background-color: rgb(0, 99, 13);
   width: 100%;
 }
 
-.alexSignature a {
-  text-decoration: underline;
+.signature a {
+  text-decoration: none;
   color: white;
 }
 
-.alexSignature a:hover {
+.signature a:hover {
   text-decoration: underline;
   color: rgb(142, 142, 255);
 }
@@ -297,5 +453,43 @@
   }
   .homePageImage {
     width: 300px;
+  }
+  .card, .card-content h3, .price-tag {
+    font-size: 10px;
+  }
+  .purchase-button {
+    font-size: 10px;
+    padding: 0;
+  }
+  .card-thumbnail {
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    max-height: 50px;
+  }
+  .team-profile-list {
+    font-size: 10px;
+    gap: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .team-profile-thumbnail {
+    width: 25px;
+    max-width: 25px;
+    height: 25px;
+    max-height: 25px;
+  }
+  .slideshow-image {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 275px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    margin: 0 auto;
+    background-position: center;
+  }
+  .bookNowPage button{
+    width: 50%;
   }
 }

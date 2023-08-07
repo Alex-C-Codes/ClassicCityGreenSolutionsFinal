@@ -6,7 +6,7 @@ export default function Contact() {
     <div className='contactPage'>
       <div><h1>Contact Us</h1></div>
       <div>
-        <form target="_blank" action="https://formsubmit.co/jmsteven28@live.com" method="POST">
+        <form target="_blank" action="https://formsubmit.co/kellinoelle@gmail.com" method="POST">
           <div className="form-group">
             <div className="form-row">
               <div className="col">

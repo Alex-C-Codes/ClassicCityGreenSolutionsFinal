@@ -1,31 +1,57 @@
 import React from 'react';
-import image from '../../assets/images/view-green-913w.webp';
+// import image from '../../assets/images/view-green-913w.webp';
 
 export default function About() {
+
+  const teamProfile = [
+    {
+      id: 1,
+      name: 'Joe',
+      profession: 'CEO',
+      profileDescription: 'Joe founded Classic City Green Solutions in 2023 with a passion and desire to provide green energy solutions to his customers.',
+      profilePic: require('../../assets/images/solar-panel-vector.png')
+    },
+    {
+      id: 2,
+      name: 'Eliza',
+      profession: 'COO',
+      profileDescription: '',
+      profilePic: require('../../assets/images/solar-panel-vector.png')
+    },
+    {
+      id: 3,
+      name: 'Alex',
+      profession: 'Marketing',
+      profileDescription: '',
+      profilePic: require('../../assets/images/solar-panel-vector.png')
+    },
+  ]
+
   return (
-    <div>
-      <div>
-        <h1>About</h1>
-        {/* <div 
-          style={{
-            textAlign: 'center',
-            backgroundImage:`url(${image})`, 
-            backgroundRepeat: 'no-repeat', 
-            padding: '250px'
-          }}>
-        </div> */}
-        <img
-        src={image}
-        alt="About Thumbnail"
-        className="card-thumbnail"
-        />
-        <div className='aboutSection'>
-          <br></br>
-          <p>
-          We all enjoy the conveniences of modern life. But in today's world, those conveniences are just a catastrophic event away from being out of reach. Our solutions are intended for disaster relief, off the grid living, RV independence, or simply insurance in case you have to "bug out."
-          </p>
+    <div className='about-page'>
+      <h1>Meet the Team</h1>
+        <div className='team-profile-list'>
+          {teamProfile.map((data) => 
+          
+          <div key={data.id} className='team-profile'>
+            <div className='team-profile-content'>
+              <ul>
+                <li>
+                  <img
+                    src={data.profilePic}
+                    alt="About Thumbnail"
+                    className="team-profile-thumbnail"
+                  />
+                </li>
+                <li className='name'><b>{data.name}</b></li>
+                <li className='profession'>{data.profession}</li>
+                {/* <li className='profileDescription'>{data.profileDescription}</li> */}
+              </ul>
+            </div>
+          </div>
+
+          )}
         </div>
-      </div>
     </div>
   );
 }
