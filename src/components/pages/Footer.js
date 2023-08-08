@@ -22,6 +22,7 @@ export default function FooterPage() {
                         <i className="fas fa-solar-panel"></i>
                     </a>
                 </div>
+                <p>Copyright © Classic City Green Solutions. All Rights Reserved {new Date().getFullYear()}</p>
 
                 <Signature />
 
